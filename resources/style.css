@@ -161,12 +161,13 @@ header nav {
     margin-bottom: 1rem;
 }
 
-.job ul {
+ol, ul {
+    margin-bottom: 1.5rem;
     margin-left: 1.2rem;
     color: #555;
 }
 
-.job li {
+li {
     margin-bottom: 0.5rem;
 }
 
