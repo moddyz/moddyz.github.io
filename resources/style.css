@@ -99,6 +99,17 @@ header nav {
     margin-bottom: 0.8rem;
 }
 
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.links div {
+    display: flex;
+    justify-content: space-between;
+}
+
 /* Experience page */
 .job {
     margin-bottom: 1.5rem;
