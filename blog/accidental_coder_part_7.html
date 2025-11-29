@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rlei.dev / blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-links">
+                <a href="../index.html">Home</a> ·
+                <a href="../blog.html">Blog</a> ·
+                <a href="../art.html">Art</a> ·
+                <a href="../experience.html">Experience</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://github.com/moddyz" title="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://linkedin.com/in/moddyz" title="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+<main>
+    <article>
+        <h1>Accidental Coder Part 7: China, Round Two</h1>
+        <div class="post-meta">November 28, 2025</div>
+        
+        <p><a href="accidental_coder_part_6.html">Read Part 6 here!</a></p>
+
+        <p>Late 2011.  I'm back in Guangzhou working for Uncle J.'s Auto-stereoscopic 3D venture.  Within a day of landing, we were off to the Canton Fair to promote a new product, an Auto-stereo 3D tablet.  Full of determination and energy, I managed to talk a middle-eastern buyer into purchasing 10 tablets.  The team celebrated over some Zhujiang draft beer and mouth-watering Canton cuisine.</p>
+
+        <p>While Xiao Feng's team was responsible for producing 3D content to show off the auto-stereo displays, I wanted to find a different niche.  I began to see problems in a different way.  As it turned out, the whole iOS game development experience earlier in the year had given me the confidence and hands-on skills to tackle some of the practical challenges in the business with software solutions.</p>
+
+        <p>The first software project was a C++ nuke plugin and template for interlacing the 8-view sequences into the auto-stereo video format, which was eventually demoed at CES in Vegas.  I felt a huge rush when the program built and actually <em>worked</em> after struggling through the (lack of) documentation and examples.</p>
+
+        <p>Around the same time, I began to take online software engineering courses from Harvard Extension School to further bolster my coding skills:
+        <ul>
+          <li><b>CS50</b> - which was a intro course with an array of challenging problem sets that I thoroughly enjoyed
+          <li><b>System Programming & Computer Architecture</b> - which was intense, covering virtual memory, multithreading, network programming, assembly, and all the low level goodness</li>
+        </ul>
+        <p>Also around the same time, I started dating a girl who would later become my wife.  Within a few weeks after we started dating she moved to London to study her masters so we did long distance.  Everyday was jam packed - work, study, and skype calls with the GF.</p>
+
+        <p>The Nuke plugin solution I created earlier in the year suffered from artifacts due to video compression.  So we needed a solution that performed the interlacing in real-time.  I turned to VLC, which offered a plug-in system for shaders that can be executed on the video input.  The VLC shader plug-in for Linux could be written in GLSL and was relatively straightforward, but the Windows version only supported ARB assembly as the shader language.  This roadblock which would have deterred me full-stop only a year ago, now became a rewarding experience of transcribing GLSL to ARB with the reference sheet at hand - <a href="https://github.com/moddyz/stereo-vlc-plugins/blob/develop/video_output/interlace-arb.c#L348">the code</a>.</p>
+
+        <figure>
+            <figcaption>https://renderguild.com/gpuguide.pdf</figcaption>
+            <img src="../resources/arb_assembly.png">
+        </figure>
+      
+        <p>A year and a half flew by.  Uncle J.'s 3D business began winding down due to some internal strife - and I parted ways.</p>  
+
+        <p>With my girlfriend returning from her studies, I wanted to stay and continue to work in China.</p>
+
+        <p>There was about a 3-month gap period where I lived in Nanjing with my dad while job hunting, during which I took on my most ambitious project yet: a real-time stereo to multi-view video processing algorithm based on the most advanced research paper at the time - AdCensus.  I prototyped the initial version in MATLAB, then began the C++ and CUDA implementation.  And through the summer heat, sleepless nights, running <code>nvprof</code> endless number of times, I had prevailed - <a href="https://github.com/moddyz/stereo-to-multiview-cuda">the code</a>.  We demoed it to a few people in the industry, and a team actually offered $100,000 RMB to buy it - which I turned down.</p>
+
+        <p>Then Oriental DreamWorks in Shanghai gave me a call.  After a few enjoyable interviews with their team I accepted the offer.  Guess who was finally was going to finally become a TD?!</p>
+        
+        <a href="accidental_coder_part_8.html">Continue to Read Part 8.<a>
+
+    </article>
+</main>
+<Macro 'body_end'>

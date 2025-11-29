@@ -75,7 +75,7 @@ nav .social-icons svg {
 
 /* Header */
 header {
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 header h1 {
@@ -152,6 +152,7 @@ li {
   display: flex;
   align-items: center;
   gap: 20px;
+  margin-bottom: 1.5rem;
 }
 
 .profile-circle {

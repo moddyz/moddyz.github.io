@@ -1,0 +1,42 @@
+{% from "template.macros" import body_begin, body_end %}
+{{ body_begin(title="rlei.dev / blog", rel_path=rel_path) }}
+<main>
+    <article>
+        <h1>Accidental Coder Part 7: China, Round Two</h1>
+        <div class="post-meta">November 28, 2025</div>
+        
+        <p><a href="accidental_coder_part_6.html">Read Part 6 here!</a></p>
+
+        <p>Late 2011.  I'm back in Guangzhou working for Uncle J.'s Auto-stereoscopic 3D venture.  Within a day of landing, we were off to the Canton Fair to promote a new product, an Auto-stereo 3D tablet.  Full of determination and energy, I managed to talk a middle-eastern buyer into purchasing 10 tablets.  The team celebrated over some Zhujiang draft beer and mouth-watering Canton cuisine.</p>
+
+        <p>While Xiao Feng's team was responsible for producing 3D content to show off the auto-stereo displays, I wanted to find a different niche.  I began to see problems in a different way.  As it turned out, the whole iOS game development experience earlier in the year had given me the confidence and hands-on skills to tackle some of the practical challenges in the business with software solutions.</p>
+
+        <p>The first software project was a C++ nuke plugin and template for interlacing the 8-view sequences into the auto-stereo video format, which was eventually demoed at CES in Vegas.  I felt a huge rush when the program built and actually <em>worked</em> after struggling through the (lack of) documentation and examples.</p>
+
+        <p>Around the same time, I began to take online software engineering courses from Harvard Extension School to further bolster my coding skills:
+        <ul>
+          <li><b>CS50</b> - which was a intro course with an array of challenging problem sets that I thoroughly enjoyed
+          <li><b>System Programming & Computer Architecture</b> - which was intense, covering virtual memory, multithreading, network programming, assembly, and all the low level goodness</li>
+        </ul>
+        <p>Also around the same time, I started dating a girl who would later become my wife.  Within a few weeks after we started dating she moved to London to study her masters so we did long distance.  Everyday was jam packed - work, study, and skype calls with the GF.</p>
+
+        <p>The Nuke plugin solution I created earlier in the year suffered from artifacts due to video compression.  So we needed a solution that performed the interlacing in real-time.  I turned to VLC, which offered a plug-in system for shaders that can be executed on the video input.  The VLC shader plug-in for Linux could be written in GLSL and was relatively straightforward, but the Windows version only supported ARB assembly as the shader language.  This roadblock which would have deterred me full-stop only a year ago, now became a rewarding experience of transcribing GLSL to ARB with the reference sheet at hand - <a href="https://github.com/moddyz/stereo-vlc-plugins/blob/develop/video_output/interlace-arb.c#L348">the code</a>.</p>
+
+        <figure>
+            <figcaption>https://renderguild.com/gpuguide.pdf</figcaption>
+            <img src="../resources/arb_assembly.png">
+        </figure>
+      
+        <p>A year and a half flew by.  Uncle J.'s 3D business began winding down due to some internal strife - and I parted ways.</p>  
+
+        <p>With my girlfriend returning from her studies, I wanted to stay and continue to work in China.</p>
+
+        <p>There was about a 3-month gap period where I lived in Nanjing with my dad while job hunting, during which I took on my most ambitious project yet: a real-time stereo to multi-view video processing algorithm based on the most advanced research paper at the time - AdCensus.  I prototyped the initial version in MATLAB, then began the C++ and CUDA implementation.  And through the summer heat, sleepless nights, running <code>nvprof</code> endless number of times, I had prevailed - <a href="https://github.com/moddyz/stereo-to-multiview-cuda">the code</a>.  We demoed it to a few people in the industry, and a team actually offered $100,000 RMB to buy it - which I turned down.</p>
+
+        <p>Then Oriental DreamWorks in Shanghai gave me a call.  After a few enjoyable interviews with their team I accepted the offer.  Guess who was finally was going to finally become a TD?!</p>
+        
+        <a href="accidental_coder_part_8.html">Continue to Read Part 8.<a>
+
+    </article>
+</main>
+{{ body_end }}
