@@ -18,7 +18,6 @@
             <div class="nav-links">
                 <a href="{{ rel_path }}/index.html">Home</a> ·
                 <a href="{{ rel_path }}/blog.html">Blog</a> ·
-                <a href="{{ rel_path }}/art.html">Art</a> ·
                 <a href="{{ rel_path }}/experience.html">Experience</a>
             </div>
             <div class="social-icons">
